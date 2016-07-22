@@ -1,0 +1,11 @@
+package org.jboss.dddoyle.brms.rules;
+
+import org.jboss.ddoyle.openshift.rules.model.SimpleFact;
+
+rule "simple rule"
+when
+	$s:SimpleFact(type=="test");
+	
+then
+	$s.setResult("This is a test");
+end
